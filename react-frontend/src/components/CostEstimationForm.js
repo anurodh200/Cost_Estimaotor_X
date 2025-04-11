@@ -55,12 +55,12 @@ const CostEstimationForm = ({ setResult }) => {
     };
 
     return (
-        <Paper style={{ padding: 20, marginBottom: 20 }}>
-            <Typography variant="h5" gutterBottom>
+        <Paper style={{ padding: 30, marginBottom: 20, maxWidth: 600, margin: '0 auto' }}>
+            <Typography variant="h5" gutterBottom align="center">
                 Construction Cost Estimator
             </Typography>
             <form onSubmit={handleSubmit}>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
                     <Grid item xs={12}>
                         <TextField
                             fullWidth
@@ -75,7 +75,7 @@ const CostEstimationForm = ({ setResult }) => {
                         />
                     </Grid>
 
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12}>
                         <FormControl fullWidth>
                             <InputLabel>Number of Storeys</InputLabel>
                             <Select
@@ -93,7 +93,7 @@ const CostEstimationForm = ({ setResult }) => {
                         </FormControl>
                     </Grid>
 
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12}>
                         <FormControl fullWidth>
                             <InputLabel>BHK Size</InputLabel>
                             <Select
@@ -113,7 +113,7 @@ const CostEstimationForm = ({ setResult }) => {
 
                     {errors.submit && (
                         <Grid item xs={12}>
-                            <Typography color="error">
+                            <Typography color="error" align="center">
                                 {errors.submit}
                             </Typography>
                         </Grid>
@@ -137,4 +137,3 @@ const CostEstimationForm = ({ setResult }) => {
 };
 
 export default CostEstimationForm;
-
